@@ -1,0 +1,6 @@
+[build]
+rustflags = ["-D", "warnings"]
+
+[alias]
+fmt = "rustfmt"
+lint = "clippy"

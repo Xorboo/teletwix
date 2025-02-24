@@ -1,0 +1,13 @@
+target/
+.cargo/
+.rustup/
+
+.git/
+.gitignore
+
+.env
+
+.idea/
+.vscode/
+*.swp
+*.swo

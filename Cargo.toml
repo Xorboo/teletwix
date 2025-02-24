@@ -1,0 +1,24 @@
+[package]
+name = "teletwix"
+version = "0.1.0"
+edition = "2024"
+authors = ["Xorboo <xorboo@gmail.com>"]
+description = "Tiny Telegram bot to repost twitter/x links as fxtwitter.com for better previews"
+repository = "https://github.com/xorboo/teletwix"
+license = "MIT"
+keywords = ["telegram", "bot", "rust", "teloxide", "twitter"]
+
+[dependencies]
+teloxide = { version = "0.13", features = ["macros"] }
+log = "0.4"
+pretty_env_logger = "0.5"
+tokio = { version =  "1.8", features = ["rt-multi-thread", "macros"] }
+regex = "1.11"
+once_cell = "1.20"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
