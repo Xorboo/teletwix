@@ -1,0 +1,8 @@
+imports_granularity = "Module"
+reorder_imports = true
+group_imports = "StdExternalCrate"
+
+blank_lines_upper_bound = 1
+blank_lines_lower_bound = 1
+
+max_width = 120

@@ -1,7 +1,6 @@
-use std::collections::HashSet;
-
 use once_cell::sync::Lazy;
 use regex::Regex;
+use std::collections::HashSet;
 use teloxide::{prelude::*, types::ReplyParameters};
 
 pub type Error = Box<dyn std::error::Error + Send + Sync>;
