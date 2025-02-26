@@ -16,6 +16,7 @@ pub async fn run_bot() {
 
     log::info!("Starting bot...");
     Dispatcher::builder(bot, schema)
+        .default_handler(|_| std::future::ready(()))
         .enable_ctrlc_handler()
         .build()
         .dispatch()
