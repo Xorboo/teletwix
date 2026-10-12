@@ -9,4 +9,4 @@ The bot is (hopefully) running on [@teletwix](https://t.me/teletwix_bot)
 - Set `TELOXIDE_TOKEN` environmental variable to your token (`cp .env.example .env`)
 - `cargo run`
 
-To work in group chats, bot requires `delete message` permissions to replace the original message. If you don't need that - remove `handle_single_url()` part in `bot.rs`, or just ignore the errors.
+In group chats, turn off privacy mode in [@BotFather](https://t.me/BotFather) (`/setprivacy` -> `Disable`), or the bot does not see the messages. After you change this setting, remove the bot from the group and add it again.

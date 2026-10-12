@@ -1,4 +1,4 @@
-FROM rust:1.85-slim AS builder
+FROM rust:1.99-slim AS builder
 
 RUN apt-get update && apt-get install -y \
     pkg-config \
@@ -11,7 +11,7 @@ COPY . .
 
 RUN cargo build --release
 
-FROM debian:bookworm-slim
+FROM debian:trixie-slim
 
 RUN apt-get update && apt-get install -y \
     libssl3 \
@@ -19,7 +19,5 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /app/target/release/teletwix /usr/local/bin/teletwix
-
-ENV TELOXIDE_TOKEN=
 
 ENTRYPOINT ["/usr/local/bin/teletwix"]

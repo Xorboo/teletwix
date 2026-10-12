@@ -3,7 +3,7 @@ mod url_parser;
 
 #[tokio::main]
 async fn main() {
-    dotenv::dotenv().ok();
+    dotenvy::dotenv().ok();
     pretty_env_logger::formatted_timed_builder()
         .filter_level(log::LevelFilter::Info)
         .init();
