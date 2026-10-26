@@ -20,7 +20,7 @@ jobs:
       - run: cargo test
 
   docker:
-    name: Docker build (what Coolify runs on deploy)
+    name: Docker build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
